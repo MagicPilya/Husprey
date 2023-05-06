@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #818FA7;
+    height: 80px;
+
+    &__navbar {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+
+        * {
+            margin: 0 40px;
+            cursor: pointer;
+            &:hover {
+                color:#A7B0C1;
+            }
+        }
+
+        &-more {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -10px;
+                width: 6px;
+                height: 2px;
+                background-color: #AEB6C8;
+                transform: rotate(45deg);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -13px;
+                width: 6px;
+                height: 2px;
+                background-color: #AEB6C8;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    &__auth {
+        display: flex;
+        align-items: center;
+        
+        &-login {
+            margin-right: 40px;
+            cursor: pointer;
+        }
+    }
+}
